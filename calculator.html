@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <title>シンプルな電卓</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <style>
-        /* ここにCSSを書いていきます。 */
-    </style>
+    <link rel="stylesheet" href="calc.css">
 </head>
 <body>
 <div class="container">
@@ -45,7 +43,28 @@
 </div>
 
 <script>
-    // ここにJavaScriptを書いていきます。
+  var inputLabel = document.getElementById('inputLabel');
+
+  function pushBtn(obj) {
+      var pushed = obj.innerHTML;
+
+      if (pushed == '=') {
+          // 計算する
+          inputLabel.innerHTML = eval(inputLabel.innerHTML);
+
+      } else if (pushed == 'AC') {
+          // 全てクリア
+          inputLabel.innerHTML = '0';
+
+      } else {
+          if (inputLabel.innerHTML == '0') {
+              inputLabel.innerHTML = pushed;
+          } else {
+              inputLabel.innerHTML += pushed;
+          }
+      }
+  }
+
 </script>
 </body>
 </html>
