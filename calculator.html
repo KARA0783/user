@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>シンプルな電卓</title>
+    <title>the!電卓</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link rel="stylesheet" href="calc.css">
 </head>
@@ -49,11 +49,11 @@
       var pushed = obj.innerHTML;
 
       if (pushed == '=') {
-          // 計算する
+          // 計算をする
           inputLabel.innerHTML = eval(inputLabel.innerHTML);
 
       } else if (pushed == 'AC') {
-          // 全てクリア
+          // オールクリア
           inputLabel.innerHTML = '0';
 
       } else {
